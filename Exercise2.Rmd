@@ -13,7 +13,7 @@ output:
     highlight: pygments
     number_sections: yes
     theme: cerulean
-geometry: margin=1.4in
+geometry: margin=1in
 csl: mee.csl
 ---
 
