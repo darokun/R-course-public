@@ -1,0 +1,44 @@
+---
+title: "Exercise 3"
+author: "Riccardo De Bin and Vindi Jurinovic"
+date: "November 04, 2015"
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    number_sections: yes
+    theme: cerulean
+geometry: tmargin=1.5in
+csl: mee.csl
+---
+
+Today we have seen how to perform a t-test, an F-test and a proportion test, and that the R-output of these tests provides the confidence interval for the test statistic. We want to practice more with these tools.
+
+
+* If we want to test if the variance in height is the same in women and men, which test can we perform? Can we reject the null hypothesis of equal variances?
+\
+
+* Which test can we use if, instead, we want to check if males are on average taller than females? Set an adequate alternative hypothesis.
+\
+
+* Analyze the confidence interval obtained in the previous point. Why doesn't it have an upper bound?     
+\
+
+* Now look at the distribution of the variable `weight`: can we graphically state its normality? Perform a transformation in order to recover it.
+\
+
+* Test if the mean of the variable `weight` is 80 kg, testing $H_0 : log(weight) = log(80)$ versus $H_1 : log(weight) \neq log(80)$.
+ \
+
+* Use the previous command to give an interval estimate for the weight, in particular a confidence interval with level 0.99.     
+\
+
+* Provide a punctual and an interval estimate for the prevalence of heart diseases and lung pathology.
+\
+
+* Test if the prevalence is statistically different between men and women.
