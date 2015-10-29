@@ -1,0 +1,150 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[tmargin=1.5in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Riccardo De Bin and Vindi Jurinovic},
+            pdftitle={Exercise 1},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{Exercise 1}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Riccardo De Bin and Vindi Jurinovic}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+
+\usepackage{wasysym}
+
+
+\begin{document}
+
+\maketitle
+
+
+~~~~~Today we will start to analyze the NHANES dataset from your R Data
+Project. Choose one sub-sample to work with and think of a name for your
+data set (say, \texttt{nhanes}, or \texttt{dataproject}, or just
+\texttt{tab} for table, or any other name you like\ldots{}). Load the
+data into your R workspace with the command:
+
+\begin{verbatim}
+> name_of_your_data <- read.table('name of the file', sep='/t', header=TRUE)
+\end{verbatim}
+
+Here, \texttt{sep} is the field separator character. Values on each line
+of the file are separated by this character (you can check this by
+opening the file in a text editor, or you can just try out some
+separators until you get the right one). \texttt{header=TRUE} means that
+R should interpret the first row of the data set as the variable
+names.\\
+
+Try to answer the questions by yourself. If you don't know the name of
+some function, say sequence, try \texttt{??sequence}. To find out more
+about a function and its arguments, use \texttt{?function\_name}.\\
+
+\section{Getting familiar with the data
+set}\label{getting-familiar-with-the-data-set}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  What is the dimension of the data set? How many rows (samples), and
+  how many columns (variables) does the data set contain? What are the
+  variable names of the data set?\\
+\item
+  All the variables in the data set are either of a class
+  \texttt{integer}, \texttt{numeric} (i.e., they are all interpreted as
+  numbers by R) or \texttt{boolean} (i.e., logical). However, some of
+  the variables should be factors rather than numerical variables.
+  Change the class of these variables with the function
+  \texttt{as.factor}. Save the new data set as an \texttt{.Rdata} file.
+  Attach the data frame so you can assess the variable names directly.\\
+\item
+  How many women and how many men are there in your data set?\\
+\item
+  What is the mean BMI in the overall population? What is the mean BMI
+  for men and women?\\
+\item
+  Who has a higher mercury level in blood: men or women? People with
+  chronic bronchitis or people without it? `Hispanic', `White', `Black'
+  or `Other/Mixed' people?\\
+\item
+  Use the function \texttt{summary} to get summarized information on all
+  the variables in the data set.\\
+\end{itemize}
+
+\section{Plots}\label{plots}
+
+\begin{itemize}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Plot the variable \texttt{rr\_sys} as a function of \texttt{bmi}. Try
+  out different types o point characters (function argument
+  \texttt{pch}) and colors (argument \texttt{col}) and choose the
+  prettiest ones $\smiley$. Label the x- and y-axis in the plot with the
+  corresponding variable names (function arguments \texttt{xlab} and
+  \texttt{ylab}). Think of a suitable title and add it to your plot.
+  Type \texttt{?plot} for more information on the function and its
+  arguments and try out some of these.\\
+\item
+  Now we want to plot the variable \texttt{rr\_sys} against
+  \texttt{diab\_lft}. Which plot should we use here? Create the plot and
+  choose different colors for the boxes. Give each box a suitable name
+  and add a label for the y-axis as well as the main title. Do you see a
+  difference in systolic blodd pressure between diabetics and
+  non-diabetics?\\
+\item
+  Plot the variable \texttt{bmi} against \texttt{educ}. Interpret the
+  picture you see.\\
+\item
+  Plot the histogram of the high-density lipoprotein (HDL) cholesterol
+  levels. How does the distribution look like? Can you convert the
+  variable \texttt{hdl} so that its distribution looks more normal?
+  Create such variable and add it to your data set. Save the new data
+  set in a new file.
+\end{itemize}
+
+\end{document}
