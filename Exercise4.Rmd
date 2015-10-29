@@ -1,0 +1,33 @@
+---
+title: "Exercise 4"
+author: "Riccardo De Bin and Vindi Jurinovic"
+date: "November 11, 2015"
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    number_sections: yes
+    theme: cerulean
+geometry: tmargin=2.5in
+csl: mee.csl
+---
+
+1. Turn the variable `smokstat` into a binary variable (put the non-smokers and the people who almost never smoked into one group).
+\
+
+2. Do you expect smokers to have a higher cancer prevalence than non-smokers? Test if there is a significant difference in cancer prevalence between smokers and non-smokers (using the variable from 1.). If so, which group has a higher prevalence? Did you get the result you expected?
+\
+
+3. Do the same in the subgroup of people who are between 20 and 49 years old. What do you see now? How can you explain the results?
+\
+
+4. Turn the variable `diab_lft` into a binary variable (put diabetes and pre-diabetes together). Test if there is a significant difference in diabetes prevalence between overweight and normal-weighted people. 
+\
+
+5. Test if overweight people have a higher prevalence of heart diseases. Does your finding confirm the hypothesis that overweight is a risk factor for heart disease?
+

@@ -1,0 +1,149 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[tmargin=1.5in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Riccardo De Bin and Vindi Jurinovic},
+            pdftitle={Exercise 5},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{Exercise 5}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Riccardo De Bin and Vindi Jurinovic}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{November 18, 2015}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+We have seen some statistical tools useful to compare groups in case of
+discrete data. In particular, the first two questions refer to the use
+of the chi-square and the Fisher exact tests.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Use a chi-square test in order to test whether the presence of chronic
+  bronchitis and the current smoking status are independent.\\
+\item
+  Use a Fisher test to verify independence between sex and the presence
+  of any liver disease.
+\end{enumerate}
+
+In the previous exercises, we have transformed the variable \texttt{hdl}
+in order to fulfill the normality assumption necessary to perform the
+t-test. Now, we know some non-parametric tests which allow us to test
+out hypothesis without performing any transformation.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{2}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Perform a sign test both on \texttt{hdl} and on \texttt{logHdl} to
+  test the hypothesis that the median of the cholesterol level is 1.30.
+  Is the median significantly different from 1.30? Do you obtain the
+  same results using \texttt{hdl} and \texttt{logHdl}? (remember to use
+  the logarithm of 1.30 in the latter case).\\
+\item
+  Use a Mann-Whitney test to test the null hypothesis
+  $H_0 : male\:weight = female\:weight$.
+\end{enumerate}
+
+Now let us go back to the NHANES data from your R Data Project. For
+these new questions, it can be useful to draw a mosaic plot. In R, this
+can be done through the function \texttt{mosaicplot()}. As usual, for
+further information, it is possible to consult the related help page:
+\texttt{\textgreater{} ?mosaicplot}.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Income and health.
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii})}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    It has been shown that there is a ``social gradient'' in health,
+    such that the richer you are, the more likely you are to have better
+    health. Plot general self-rated health against relative income so
+    that you can get an impression whether this is confirmed by our
+    data.\\
+  \item
+    Test the relation for statistical significance using an appropriate
+    test.\\
+  \end{enumerate}
+\item
+  Unemployment and depression
+
+  \begin{enumerate}
+  \def\labelenumii{\alph{enumii})}
+  \itemsep1pt\parskip0pt\parsep0pt
+  \item
+    Recode the variable \texttt{jobstat} into a new dichotomous variable
+    ``Unemployment yes/no''.\\
+  \item
+    Calculate a depression score by taking the mean across all items of
+    the depression scale (``PHQ-9''). If the values for more than 3
+    items are missing, assign the person a missing value. The resulting
+    score may be treated as a metric variable.\\
+  \item
+    Investigate the hypothesis that unemployed people are more depressed
+    than employed people. Check also whether the assumptions that your
+    method of choice underlies are met.
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}
