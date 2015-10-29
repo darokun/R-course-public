@@ -1,0 +1,93 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[tmargin=2.5in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Riccardo De Bin and Vindi Jurinovic},
+            pdftitle={Exercise 4},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{Exercise 4}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Riccardo De Bin and Vindi Jurinovic}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \predate{\centering\large\emph}
+  \postdate{\par}
+  \date{November 11, 2015}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\itemsep1pt\parskip0pt\parsep0pt
+\item
+  Turn the variable \texttt{smokstat} into a binary variable (put the
+  non-smokers and the people who almost never smoked into one group).\\
+\item
+  Do you expect smokers to have a higher cancer prevalence than
+  non-smokers? Test if there is a significant difference in cancer
+  prevalence between smokers and non-smokers (using the variable from
+  1.). If so, which group has a higher prevalence? Did you get the
+  result you expected?\\
+\item
+  Do the same in the subgroup of people who are between 20 and 49 years
+  old. What do you see now? How can you explain the results?\\
+\item
+  Turn the variable \texttt{diab\_lft} into a binary variable (put
+  diabetes and pre-diabetes together). Test if there is a significant
+  difference in diabetes prevalence between overweight and
+  normal-weighted people.\\
+\item
+  Test if overweight people have a higher prevalence of heart diseases.
+  Does your finding confirm the hypothesis that overweight is a risk
+  factor for heart disease?
+\end{enumerate}
+
+\end{document}
