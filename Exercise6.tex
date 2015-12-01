@@ -31,7 +31,7 @@
 \hypersetup{breaklinks=true,
             bookmarks=true,
             pdfauthor={Riccardo De Bin and Vindi Jurinovic},
-            pdftitle={Exercise 6},
+            pdftitle={Exercise 7},
             colorlinks=true,
             citecolor=blue,
             urlcolor=blue,
@@ -46,7 +46,7 @@
 %%% Change title format to be more compact
 \usepackage{titling}
 \setlength{\droptitle}{-2em}
-  \title{Exercise 6}
+  \title{Exercise 7}
   \pretitle{\vspace{\droptitle}\centering\huge}
   \posttitle{\par}
   \author{Riccardo De Bin and Vindi Jurinovic}
@@ -69,11 +69,11 @@
 \def\labelenumi{\arabic{enumi}.}
 \item
   Categorize the variable \texttt{bmi} into an underweight
-  ($BMI < 18.5$), normal weight ($18.5 ??? BMI < 25$), overweight
-  ($25 ??? BMI < 30$) and obese ($BMI ??? 30$) group. Turn the variable
-  into a factor. What is the proportion of overweight or obese people
-  according to the categorized BMI? What is the proportion of people
-  ever diagnosed with being overweight (variable
+  ($BMI < 18.5$), normal weight ($18.5 \leq BMI < 25$), overweight
+  ($25 \leq BMI < 30$) and obese ($BMI \geq 30$) group. Turn the
+  variable into a factor. What is the proportion of overweight or obese
+  people according to the categorized BMI? What is the proportion of
+  people ever diagnosed with being overweight (variable
   \texttt{ovrwght\_ever})? How many overweight people were actually ever
   diagnosed with being overweight?
 \item
@@ -96,19 +96,24 @@
   as a possible confounder: older people get cancer more often, and
   smokers tend to be younger. When we adjust for age, we can see that
   young smokers actually do tend to develop more cancers than young
-  non-smokers. For the following exercise, create a binary age (younger:
-  age ??? 50, and older: age\textgreater{}50) and a binary smoking
-  variable.
+  non-smokers.\\ For the following exercise, create a binary age
+  (younger: age $\leq$ 50, and older: age\textgreater{}50) and a binary
+  smoking variable.
 \end{enumerate}
 
+\begin{quote}
 You are working for a tobacco company and want to show that smoking is
 good for you regardless of your age. Your employer provides you with our
 data set and asks you to produce a significant association between
 smoking and cancer prevalence in every age group (of course, a desirable
 association). Your task is to produce a subsample where in the end,
 smoking turns out to be protective against cancer, even when you adjust
-for age. Can you satisfy your employer and create such data set? Having
-in mind this last exercise, do you trust every result with a significant
-p-value?
+for age. Can you satisfy your employer and create such data set?
+\end{quote}
+
+\begin{quote}
+Having in mind this last exercise, do you trust every result with a
+significant p-value?
+\end{quote}
 
 \end{document}
