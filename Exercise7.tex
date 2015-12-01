@@ -1,0 +1,119 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[tmargin=1.5in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Riccardo De Bin and Vindi Jurinovic},
+            pdftitle={Exercise 7},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{Exercise 7}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Riccardo De Bin and Vindi Jurinovic}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\textbf{Exercise 1:}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Categorize the variable \texttt{bmi} into an underweight
+  ($BMI < 18.5$), normal weight ($18.5 \leq BMI < 25$), overweight
+  ($25 \leq BMI < 30$) and obese ($BMI \geq 30$) group. Turn the
+  variable into a factor. What is the proportion of overweight or obese
+  people according to the categorized BMI? What is the proportion of
+  people ever diagnosed with being overweight (variable
+  \texttt{ovrwght\_ever})? How many overweight people were actually ever
+  diagnosed with being overweight?
+\item
+  Is there a difference in diabetes prevalence between obese people
+  diagnosed with overweight and those who were never diagnosed? What
+  about self-rated health? How do you explain the results?
+\item
+  With a function \texttt{sample}, you can create a random subsample of
+  a data set. For example, the command \texttt{sample(1:1000, 500)}
+  creates a subsample of size 500 from a vector containing numbers
+  between 1 and 1000. Create a subsample of size 500 using your data
+  set. In this subsample, test the relationship between heart diseases
+  and gender. Repeat the analysis 10 times (with 10 different
+  subsamples) and note the results. Compare them with the result for the
+  whole data set. How do you explain the differences?
+\item
+  We have seen in a previous lecture that in our data set, smoking seems
+  to be negatively associated with cancer: cancer prevalence in
+  non-smokers is higher than in smokers. Further analysis revealed age
+  as a possible confounder: older people get cancer more often, and
+  smokers tend to be younger. When we adjust for age, we can see that
+  young smokers actually do tend to develop more cancers than young
+  non-smokers.\\ For the following exercise, create a binary age
+  (younger: age $\leq$ 50, and older: age\textgreater{}50) and a binary
+  smoking variable.
+\end{enumerate}
+
+\begin{quote}
+You are working for a tobacco company and want to show that smoking is
+good for you regardless of your age. Your employer provides you with our
+data set and asks you to produce a significant association between
+smoking and cancer prevalence in every age group (of course, a desirable
+association). Your task is to produce a subsample where in the end,
+smoking turns out to be protective against cancer, even when you adjust
+for age. Can you satisfy your employer and create such data set?
+\end{quote}
+
+\begin{quote}
+Having in mind this last exercise, do you trust every result with a
+significant p-value?
+\end{quote}
+
+\end{document}
