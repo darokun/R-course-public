@@ -1,0 +1,37 @@
+---
+title: "Exercise 8"
+author: "Riccardo De Bin and Vindi Jurinovic"
+output:
+  pdf_document:
+    fig_caption: yes
+    keep_tex: yes
+    number_sections: yes
+  html_document:
+    fig_caption: yes
+    force_captions: yes
+    highlight: pygments
+    number_sections: yes
+    theme: cerulean
+geometry: tmargin=1.5in
+csl: mee.csl
+---
+
+**Exercise 7:** (Data Project)
+
+a) How strong is the relationship between BMI and systolic blood pressure? Is it significant? How much of the variation in systolic blood pressure can be explained (in a statistical sense) by variation in BMI?          
+
+b) Does the relationship between systolic blood pressure and BMI change when you adjust for age (categorized)? Interpret the coefficients of the resulting model (when you mean-center BMI before fitting the model, you can also interpret the intercept). Would you say that BMI has a clinically relevant impact on blood pressure, according to your model?            
+
+c) Try to find a better model to predict systolic blood pressure by including more covariates. Select a number of candidate covariates which in your opinion may be related to systolic blood pressure, and then choose a model selection strategy and a criterion/test for comparing models. Describe the model with the best fit according to your search, and interpret the model coefficients.       
+
+**Exercise 8:** (Data Project)
+
+a) Analyze the relationship between lifetime diagnosis of cancer and exposure to pollutants, using the categorized age variable (Note: No information on pollutant exposure was collected from participants aged 80+, so these cannot be included in the analysis). Does the adjustment for age change the picture? Interpret the model coefficients including the intercept.         
+
+b) Try to find a good model of cancer diagnosis. Describe and interpret it as you did for systolic blood pressure.     
+
+**Exercise 9:** (Data Project)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dichotomize the variable `sweet_prvmo` into the categories '< 30 portions' and '$\geq$ 30 portions'. Dichotomize `diab_lft` into 'No Diabetes' vs. 'Diabetes or Prediabetes'. Test the relationship between the two dichotomous variables. Before you look at the results: Do you think there is an association, and if so, in which direction? Why do you think so? Compare the results with your guess.
+
+

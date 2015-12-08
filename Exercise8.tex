@@ -1,0 +1,117 @@
+\documentclass[]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+    \usepackage{xltxtra,xunicode}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+\fi
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\usepackage[tmargin=1.5in]{geometry}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Riccardo De Bin and Vindi Jurinovic},
+            pdftitle={Exercise 8},
+            colorlinks=true,
+            citecolor=blue,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}  % don't use monospace font for urls
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\setcounter{secnumdepth}{5}
+
+%%% Change title format to be more compact
+\usepackage{titling}
+\setlength{\droptitle}{-2em}
+  \title{Exercise 8}
+  \pretitle{\vspace{\droptitle}\centering\huge}
+  \posttitle{\par}
+  \author{Riccardo De Bin and Vindi Jurinovic}
+  \preauthor{\centering\large\emph}
+  \postauthor{\par}
+  \date{}
+  \predate{}\postdate{}
+
+
+
+
+\begin{document}
+
+\maketitle
+
+
+\textbf{Exercise 7:} (Data Project)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  How strong is the relationship between BMI and systolic blood
+  pressure? Is it significant? How much of the variation in systolic
+  blood pressure can be explained (in a statistical sense) by variation
+  in BMI?
+\item
+  Does the relationship between systolic blood pressure and BMI change
+  when you adjust for age (categorized)? Interpret the coefficients of
+  the resulting model (when you mean-center BMI before fitting the
+  model, you can also interpret the intercept). Would you say that BMI
+  has a clinically relevant impact on blood pressure, according to your
+  model?
+\item
+  Try to find a better model to predict systolic blood pressure by
+  including more covariates. Select a number of candidate covariates
+  which in your opinion may be related to systolic blood pressure, and
+  then choose a model selection strategy and a criterion/test for
+  comparing models. Describe the model with the best fit according to
+  your search, and interpret the model coefficients.
+\end{enumerate}
+
+\textbf{Exercise 8:} (Data Project)
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi})}
+\item
+  Analyze the relationship between lifetime diagnosis of cancer and
+  exposure to pollutants, using the categorized age variable (Note: No
+  information on pollutant exposure was collected from participants aged
+  80+, so these cannot be included in the analysis). Does the adjustment
+  for age change the picture? Interpret the model coefficients including
+  the intercept.
+\item
+  Try to find a good model of cancer diagnosis. Describe and interpret
+  it as you did for systolic blood pressure.
+\end{enumerate}
+
+\textbf{Exercise 9:} (Data Project)
+
+~~~~~Dichotomize the variable \texttt{sweet\_prvmo} into the categories
+`\textless{} 30 portions' and `$\geq$ 30 portions'. Dichotomize
+\texttt{diab\_lft} into `No Diabetes' vs. `Diabetes or Prediabetes'.
+Test the relationship between the two dichotomous variables. Before you
+look at the results: Do you think there is an association, and if so, in
+which direction? Why do you think so? Compare the results with your
+guess.
+
+\end{document}
